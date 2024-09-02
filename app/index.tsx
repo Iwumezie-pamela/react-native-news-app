@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import { useRouter } from 'expo-router'
 
@@ -7,7 +7,7 @@ type Props = {}
 const Home = (props: Props) => {
     const router = useRouter()
     return (
-        <View className='flex-1 justify-center items-center'>
+        <View style={styles.container}>
             <Text>Welcome Page</Text>
             <TouchableOpacity onPress={() => router.push('/(tabs)')}>
                 <Text>Go to Home Screen</Text>
@@ -17,3 +17,11 @@ const Home = (props: Props) => {
 }
 
 export default Home
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
+})

@@ -4,9 +4,9 @@ import { Tabs } from 'expo-router'
 
 const TabLayout = () => {
     return (
-        <View>
-            <Tabs />
-        </View>
+        <Tabs>
+            <Tabs.Screen options={{ title: 'Home' }} />
+        </Tabs>
     )
 }
 
